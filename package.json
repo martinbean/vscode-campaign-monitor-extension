@@ -1,0 +1,37 @@
+{
+    "name": "campaignmonitor",
+    "displayName": "Campaign Monitor",
+    "version": "1.0.0",
+    "description": "Adds HTML snippets for working with Campaign Monitor templates.",
+    "keywords": [
+        "campaignmonitor",
+        "createsend"
+    ],
+    "bugs": {
+        "url": "https://github.com/martinbean/vscode-campaign-monitor-extension/issues"
+    },
+    "author": {
+        "name": "Martin Bean",
+        "email": "martin@martinbean.co.uk",
+        "url": "https://martinbean.co.uk"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/martinbean/vscode-campaign-monitor-extension"
+    },
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "publisher": "martinbean",
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

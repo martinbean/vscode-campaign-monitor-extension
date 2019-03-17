@@ -1,0 +1,40 @@
+{
+    "Data Repeater": {
+        "prefix": "datarepeater",
+        "body": "<datarepeater${2: src=\"$1\"} type=\"rss\">\n\t${3:<!-- Repeater Content -->}\n</datarepeater>$0",
+        "description": "The container for the entire RSS content section, the data repeater defines a repeating section of content which will be filled by your specified RSS feed."
+    },
+    "Layout": {
+        "prefix": "layout",
+        "body": "<layout${2: label=\"$1\"}>\n\t$3\n</layout>$0",
+        "description": "You can include multiple layout designs inside a single repeater tag, allowing authors to select a suitable layout when adding content to templates in our custom template content editor. For example, one layout could be for text only, another is text with a left-aligned image, and a third layout might be for an image gallery."
+    },
+    "Multiline": {
+        "prefix": "multiline",
+        "body": "<multiline${2: label=\"$1\"} />$0",
+        "description": "Outputs a multi-line text field that authors can modify in our custom template content editor. Each paragraph is automatically wrapped in a <p> tag, so you'll want to accommodate for that in your CSS."
+    },
+    "Repeater": {
+        "prefix": "repeater",
+        "body": "<repeater>\n\t$1\n</repeater>$0",
+        "description": [
+            "Defines a content block that can be repeated an infinite number of times in the template. Must include either a <singleline>, <multiline>, or <img editable> tag. You can have an unlimited number of repeaters in your template, and each repeater can contain any number of editable single line and multi line elements, as well as editable images. These are usually used for lists of articles or features which can repeat an unknown number of times. Keep in mind that you cannot nest repeaters.",
+            "You can use the optional layout element described below to specify as many different designs as you like for content items in this repeating block."
+        ]
+    },
+    "Repeater Title": {
+        "prefix": "repeatertitle",
+        "body": "<repeatertitle />$0",
+        "description": "Outputs a link to a content item, using the text from each <singleline> element which included the repeatertitle='true' parameter. Used exclusively within the <tableofcontents> tag."
+    },
+    "Singleline": {
+        "prefix": "singleline",
+        "body": "<singleline${2: label=\"$1\"}${4: repeatertitle=\"${3:true}\"} />$0",
+        "description": "Outputs a single line text field that authors can modify in our custom template content editor. This is ideal for headlines, and links can be used. Text between the tags is used as the default value."
+    },
+    "Table of Contents": {
+        "prefix": "toc",
+        "body": "<tableofcontents>\n\t${1:<li><repeatertitle /></li>}\n</tableofcontents>$0",
+        "description": "Creates an automated list of every single line content item that includes the repeatertitle attribute in your template. You must include a <repeatertitle> tag inside the table of contents."
+    }
+}
